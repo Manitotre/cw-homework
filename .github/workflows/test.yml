@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   tests:
-    runs-on: ubuntu-21.04
+    runs-on: ubuntu-20.04
     container: ppapav/computational-workflows:latest
     
     steps:
