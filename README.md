@@ -94,7 +94,10 @@ git push
    `<yourdockerhubusername>/computational-workflows`.
 
 ```
-# Add your commands here
+docker build .
+docker tag 714057527862 ppapav/computational-workflows-homework:latest
+docker login
+docker push ppapav/computational-workflows:latest
 ```
 
 ## Run a container, and share in files from the host.
