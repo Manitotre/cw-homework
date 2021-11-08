@@ -107,7 +107,7 @@ docker push ppapav/computational-workflows:latest
    an interactive prompt inside the running container.
 
 ```
-# Add your commands here
+docker run -ti -v $(pwd):/root/shared ppapav/computational-workflows
 ```
 
 ## Setup a simple Python test suite
@@ -118,14 +118,19 @@ docker push ppapav/computational-workflows:latest
    repository.  ``git add``, ``git commit`` and ``git push`` them.
 
 ```
-# Add your commands here
+cp /mnt/c/Users/paris.papavasileiou/Downloads/wallet.py wallet.py
+cp /mnt/c/Users/paris.papavasileiou/Downloads/test_wallet.py test_wallet.py
+git add .
+git commit -m "Added scripts manually"
+git push
 ```
 
 2. Start a Docker container using your image and share your repository into a
    directory `/root/shared` into the container.
 
 ```
-# Add your commands here
+# Running the command from the repository root
+docker run -ti -v $(pwd):/root/shared ppapav/computational-workflows
 ```
 
 3. Run the tests inside the container by going to `/root/shared` and running the
