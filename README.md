@@ -129,7 +129,7 @@ git push
    directory `/root/shared` into the container.
 
 ```
-# Running the command from the repository root
+# Running the command from the repository directory:
 docker run -ti -v $(pwd):/root/shared ppapav/computational-workflows
 ```
 
